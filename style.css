@@ -77,7 +77,8 @@ body {
       text-align: center;
   }
 
-  #ten {
-
+  #clear {
+    background-color: black;
+    color: red;
   }
   
