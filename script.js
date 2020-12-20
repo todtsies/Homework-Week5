@@ -158,6 +158,6 @@ $(document).ready(function () {
     $("#toDo9").addClass("future");
   }
  }
-
+displayColor();
  
 });
