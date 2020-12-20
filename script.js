@@ -115,6 +115,14 @@ $(document).ready(function () {
   } else if (current < 11) {
     $("#toDo3").addClass("future");
   }
+  if (current > 12) {
+    $("#toDo4").addClass("past");
+  } else if (current >= 12 && current < 13) {
+    $("#toDo4").addClass("present");
+  } else if (current < 12) {
+    $("#toDo4").addClass("future");
+  }
+  
  }
 
  
