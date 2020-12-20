@@ -122,7 +122,41 @@ $(document).ready(function () {
   } else if (current < 12) {
     $("#toDo4").addClass("future");
   }
-  
+  if (current > 13) {
+    $("#toDo5").addClass("past");
+  } else if (current >= 13 && current < 14) {
+    $("#toDo5").addClass("present");
+  } else if (current < 13) {
+    $("#toDo5").addClass("future");
+  }
+  if (current > 14) {
+    $("#toDo6").addClass("past");
+  } else if (current >= 14 && current < 15) {
+    $("#toDo6").addClass("present");
+  } else if (current < 14) {
+    $("#toDo6").addClass("future");
+  }
+  if (current > 15) {
+    $("#toDo7").addClass("past");
+  } else if (current >= 15 && current < 16) {
+    $("#toDo7").addClass("present");
+  } else if (current < 15) {
+    $("#toDo7").addClass("future");
+  }
+  if (current > 16) {
+    $("#toDo8").addClass("past");
+  } else if (current >= 16 && current < 17) {
+    $("#toDo8").addClass("present");
+  } else if (current < 16) {
+    $("#toDo8").addClass("future");
+  }
+  if (current > 17) {
+    $("#toDo9").addClass("past");
+  } else if (current >= 17 && current < 18) {
+    $("#toDo9").addClass("present");
+  } else if (current < 17) {
+    $("#toDo9").addClass("future");
+  }
  }
 
  
