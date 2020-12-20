@@ -2,15 +2,14 @@ $(document).ready(function () {
   //populates current date when the screen is loaded
   function setPlanner() {
     $("#currentDay").text(moment().format("dddd, MMMM Do YYYY"));
-    
   }
   setPlanner();
-
+  //clear button to clear out text inputs and local storage
   $("#clear").click(function () {
     localStorage.clear();
     location.reload();
   });
-
+  //functions to save each text input to local storage
   var input_textarea1 = document.querySelector("#toDo1");
   var save_button1 = document.querySelector("#saveThis1");
   input_textarea1.value = localStorage.getItem("9-AM");
@@ -91,73 +90,72 @@ $(document).ready(function () {
   function updateOutput9() {
     localStorage.setItem("5-PM", input_textarea9.value);
   }
-
- var current = new Date().getHours();
- function displayColor() {
-  if (current > 9){
-    $("#toDo1").addClass("past");
-    } else if (current  >= 9 && current < 10) {
-    $("#toDo1").addClass("present");
+  //function to get the colors to coordinate with the time of the day
+  var current = new Date().getHours();
+  function displayColor() {
+    if (current > 9) {
+      $("#toDo1").addClass("past");
+    } else if (current >= 9 && current < 10) {
+      $("#toDo1").addClass("present");
     } else if (current < 9) {
-    $("#toDo1").addClass("future");
+      $("#toDo1").addClass("future");
+    }
+    if (current > 10) {
+      $("#toDo2").addClass("past");
+    } else if (current >= 10 && current < 11) {
+      $("#toDo2").addClass("present");
+    } else if (current < 10) {
+      $("#toDo2").addClass("future");
+    }
+    if (current > 11) {
+      $("#toDo3").addClass("past");
+    } else if (current >= 11 && current < 12) {
+      $("#toDo3").addClass("present");
+    } else if (current < 11) {
+      $("#toDo3").addClass("future");
+    }
+    if (current > 12) {
+      $("#toDo4").addClass("past");
+    } else if (current >= 12 && current < 13) {
+      $("#toDo4").addClass("present");
+    } else if (current < 12) {
+      $("#toDo4").addClass("future");
+    }
+    if (current > 13) {
+      $("#toDo5").addClass("past");
+    } else if (current >= 13 && current < 14) {
+      $("#toDo5").addClass("present");
+    } else if (current < 13) {
+      $("#toDo5").addClass("future");
+    }
+    if (current > 14) {
+      $("#toDo6").addClass("past");
+    } else if (current >= 14 && current < 15) {
+      $("#toDo6").addClass("present");
+    } else if (current < 14) {
+      $("#toDo6").addClass("future");
+    }
+    if (current > 15) {
+      $("#toDo7").addClass("past");
+    } else if (current >= 15 && current < 16) {
+      $("#toDo7").addClass("present");
+    } else if (current < 15) {
+      $("#toDo7").addClass("future");
+    }
+    if (current > 16) {
+      $("#toDo8").addClass("past");
+    } else if (current >= 16 && current < 17) {
+      $("#toDo8").addClass("present");
+    } else if (current < 16) {
+      $("#toDo8").addClass("future");
+    }
+    if (current > 17) {
+      $("#toDo9").addClass("past");
+    } else if (current >= 17 && current < 18) {
+      $("#toDo9").addClass("present");
+    } else if (current < 17) {
+      $("#toDo9").addClass("future");
+    }
   }
-  if (current > 10) {
-    $("#toDo2").addClass("past");
-  } else if (current >= 10 && current < 11) {
-    $("#toDo2").addClass("present");
-  } else if (current < 10) {
-    $("#toDo2").addClass("future");
-  }
-  if (current > 11) {
-    $("#toDo3").addClass("past");
-  } else if (current >= 11 && current < 12) {
-    $("#toDo3").addClass("present");
-  } else if (current < 11) {
-    $("#toDo3").addClass("future");
-  }
-  if (current > 12) {
-    $("#toDo4").addClass("past");
-  } else if (current >= 12 && current < 13) {
-    $("#toDo4").addClass("present");
-  } else if (current < 12) {
-    $("#toDo4").addClass("future");
-  }
-  if (current > 13) {
-    $("#toDo5").addClass("past");
-  } else if (current >= 13 && current < 14) {
-    $("#toDo5").addClass("present");
-  } else if (current < 13) {
-    $("#toDo5").addClass("future");
-  }
-  if (current > 14) {
-    $("#toDo6").addClass("past");
-  } else if (current >= 14 && current < 15) {
-    $("#toDo6").addClass("present");
-  } else if (current < 14) {
-    $("#toDo6").addClass("future");
-  }
-  if (current > 15) {
-    $("#toDo7").addClass("past");
-  } else if (current >= 15 && current < 16) {
-    $("#toDo7").addClass("present");
-  } else if (current < 15) {
-    $("#toDo7").addClass("future");
-  }
-  if (current > 16) {
-    $("#toDo8").addClass("past");
-  } else if (current >= 16 && current < 17) {
-    $("#toDo8").addClass("present");
-  } else if (current < 16) {
-    $("#toDo8").addClass("future");
-  }
-  if (current > 17) {
-    $("#toDo9").addClass("past");
-  } else if (current >= 17 && current < 18) {
-    $("#toDo9").addClass("present");
-  } else if (current < 17) {
-    $("#toDo9").addClass("future");
-  }
- }
-displayColor();
- 
+  displayColor();
 });
