@@ -94,7 +94,13 @@ $(document).ready(function () {
 
  var current = new Date().getHours();
  function displayColor() {
-   
+  if (current > 9){
+    $("#toDo1").addClass("past");
+    } else if (current  >= 9 && current < 10) {
+    $("#toDo1").addClass("present");
+    } else if (current < 9) {
+    $("#toDo1").addClass("future");
+  }
  }
 
  
