@@ -101,6 +101,13 @@ $(document).ready(function () {
     } else if (current < 9) {
     $("#toDo1").addClass("future");
   }
+  if (current > 10) {
+    $("#toDo2").addClass("past");
+  } else if (current >= 10 && current < 11) {
+    $("#toDo2").addClass("present");
+  } else if (current < 10) {
+    $("#toDo2").addClass("future");
+  }
  }
 
  
