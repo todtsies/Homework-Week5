@@ -92,14 +92,9 @@ $(document).ready(function () {
     localStorage.setItem("5-PM", input_textarea9.value);
   }
 
- function displayHour(){
-  var currentHour = moment().hours();
-  $('.time-blocks').each(function() {
-    var tileHour = parseInt($(this).attr('9-AM').split("-")[1]);
-    if (currentHour === tileHour){
-      $(this).removeClass("past");
-    } 
-  })
+ var current = new Date().getHours();
+ function displayColor() {
+   
  }
 
  
